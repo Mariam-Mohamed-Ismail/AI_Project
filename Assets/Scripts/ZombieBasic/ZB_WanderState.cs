@@ -42,7 +42,7 @@ public class ZB_WanderState : GOAction
             {
                 brain.agent.isStopped = false;
                 brain.agent.stoppingDistance = 0f;
-                brain.agent.speed = 1.2f;   // walking speed
+                brain.agent.speed = 1.2f;   
                 brain.agent.SetDestination(hit.position);
             }
 
@@ -51,7 +51,7 @@ public class ZB_WanderState : GOAction
 
         if (brain.anim != null)
         {
-            brain.anim.SetBool("IsChasing", false); // ✅ put it here
+            brain.anim.SetBool("IsChasing", false); 
             float spd = brain.agent.velocity.magnitude;
             brain.anim.SetFloat("Speed", spd);
         }

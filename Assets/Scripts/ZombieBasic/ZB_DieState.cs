@@ -20,10 +20,8 @@ public class ZB_DieState : GOAction
         if (brain == null) return TaskStatus.FAILED;
         if (!brain.IsDead) return TaskStatus.FAILED;
 
-        // Do death logic ONCE
         if (!fired)
         {
-            // Stop agent safely
             if (brain.agent != null)
             {
                 if (brain.agent.enabled && brain.agent.isOnNavMesh)
@@ -32,20 +30,18 @@ public class ZB_DieState : GOAction
                 brain.agent.enabled = false;
             }
 
-            // Play death animation once
             if (brain.anim != null)
             {
                 brain.anim.SetBool("IsChasing", false);
                 brain.anim.SetFloat("Speed", 0f);
                 brain.anim.ResetTrigger("Attack");
                 brain.anim.ResetTrigger("Hit");
-                brain.anim.ResetTrigger("Die");   // safety
+                brain.anim.ResetTrigger("Die");  
                 brain.anim.SetTrigger("Die");
             }
 
-            // Destroy later (increase to test)
             if (brain.health != null)
-                brain.health.DestroyAfter(4f); // use 4f for testing, then back to 2f
+                brain.health.DestroyAfter(4f); 
 
             fired = true;
         }

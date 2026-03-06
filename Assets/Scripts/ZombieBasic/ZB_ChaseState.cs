@@ -26,7 +26,7 @@ public class ZB_ChaseState : GOAction
 
         brain.agent.isStopped = false;
         brain.agent.speed = 3.5f;
-        brain.agent.stoppingDistance = brain.attackRange; // ✅ small important
+        brain.agent.stoppingDistance = brain.attackRange; 
         brain.agent.SetDestination(brain.player.position);
 
         if (brain.anim != null)
@@ -41,6 +41,6 @@ public class ZB_ChaseState : GOAction
     public override void OnAbort()
     {
         if (brain != null && brain.anim != null)
-            brain.anim.SetBool("IsChasing", false); // ✅ FIX
+            brain.anim.SetBool("IsChasing", false);
     }
 }

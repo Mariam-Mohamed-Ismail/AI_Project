@@ -432,7 +432,7 @@ MonoBehaviour:
   anim: {fileID: 3900708299052943504}
   health: {fileID: 2775588144393491546}
   detectRange: 10
-  attackRange: 2
+  attackRange: 1
 --- !u!114 &2775588144393491546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da25c0b66be4c254bb1a3a28b98df405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHP: 10
+  maxHP: 25
   currentHP: 0
   onDeath:
     m_PersistentCalls:

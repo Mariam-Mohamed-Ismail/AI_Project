@@ -37,7 +37,6 @@ public class Health : MonoBehaviour, IDamageable
     void Die()
     {
         onDeath?.Invoke();
-        // בַ ÊÚדב Destroy והַ
     }
 
     public void DestroyAfter(float seconds)

@@ -4,7 +4,6 @@ public class BulletDamage : MonoBehaviour
 {
     public int damage = 1;
 
-    // Layer that can receive damage
     public string enemyLayerName = "Enemy";
 
     private int enemyLayer;
@@ -26,7 +25,6 @@ public class BulletDamage : MonoBehaviour
 
     void TryDamage(Collider hit)
     {
-        // Only damage objects on Enemy layer
         if (hit.gameObject.layer != enemyLayer)
             return;
 
@@ -37,7 +35,6 @@ public class BulletDamage : MonoBehaviour
         }
         else
         {
-            // Sometimes collider is on a child
             var parentDmg = hit.GetComponentInParent<IDamageable>();
 
             if (parentDmg != null)
