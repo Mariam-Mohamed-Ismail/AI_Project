@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: BT_ZombieBasic
+  m_EditorClassIdentifier: Assembly-CSharp::BrickAsset
+  brickName: Assets/AI/BT_ZombieBasic.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"657db35e6d494ad498c04f6ba401338e\" nextId=\"35\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"29\" />\r\n      </root>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"29\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
+    <SelectorNode id=\"30\" />\r\n      </child>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <SelectorNode
+    id=\"30\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode id=\"31\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"32\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"33\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"34\" />\r\n        </elem>\r\n      </children>\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n   
+    <ActionNode id=\"31\" action=\"Zombie/DieState\">\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"32\" action=\"Zombie/AttackState\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"attackCooldown\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"1.2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"33\"
+    action=\"Zombie/ChaseState\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"34\"
+    action=\"Zombie/WanderState\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"wanderRadius\" type=\"System.Single\" isBlackboard=\"False\" value=\"5\"
+    />\r\n          <entry name=\"wanderWait\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n   
+    <BehaviorTree id=\"0\" _name=\"BT_ZombieBasic\" _description=\"\" _removeIfClosed=\"False\">\r\n     
+    <_rootList>\r\n        <elem>\r\n          <RepeatDecorator id=\"29\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <SelectorNode id=\"30\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"31\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"32\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"33\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"34\" />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n       
+    <nodes>\r\n          <ActionNode id=\"32\" />\r\n          <ActionNode id=\"33\"
+    />\r\n          <ActionNode id=\"34\" />\r\n          <SelectorNode id=\"30\"
+    />\r\n          <RepeatDecorator id=\"29\" />\r\n          <ActionNode id=\"31\"
+    />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"29\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"471.1021 157.5904\" name=\"Repeat\" description=\"Repeats the execution
+    of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <RepeatDecorator id=\"29\" />\r\n        </data>\r\n     
+    </_data>\r\n    </RepeatDecorator>\r\n    <SelectorNode id=\"30\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"459.9022 272.7904\" name=\"Selector\"
+    description=\"Executes all its children until one of them is successful\" cardinality=\"-1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SelectorNode
+    id=\"30\" />\r\n          <RepeatDecorator id=\"29\" />\r\n        </data>\r\n     
+    </_data>\r\n    </SelectorNode>\r\n    <ActionNode id=\"31\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"199.1022 496.7904\" name=\"Zombie/DieState\"
+    description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"31\" />\r\n          <SelectorNode
+    id=\"30\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"32\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"389.5022 490.3905\" name=\"Zombie/AttackState\" description=\"\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"32\" />\r\n          <SelectorNode id=\"30\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"33\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"603.9023 487.1906\" name=\"Zombie/ChaseState\"
+    description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"33\" />\r\n          <SelectorNode
+    id=\"30\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"34\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"786.3022 483.9906\" name=\"Zombie/WanderState\" description=\"\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"34\" />\r\n          <SelectorNode id=\"30\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.6
+  subslist: []
+  _guid: 657db35e6d494ad498c04f6ba401338e
