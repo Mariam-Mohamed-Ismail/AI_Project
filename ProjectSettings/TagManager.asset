@@ -11,6 +11,8 @@ TagManager:
   - Zombie
   - Blood
   - Concrete
+  - AcidBall
+  - Ground
   layers:
   - Default
   - TransparentFX

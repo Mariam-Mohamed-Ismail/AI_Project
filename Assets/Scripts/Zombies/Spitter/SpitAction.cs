@@ -1,8 +1,8 @@
 using BBUnity.Actions;
-using BBUnity.Conditions;
 using Pada1.BBCore;
 using Pada1.BBCore.Tasks;
 using UnityEngine;
+using Zombies.Spitter;
 
 
 namespace BBCore.Actions

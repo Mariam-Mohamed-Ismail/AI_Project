@@ -1,20 +1,24 @@
 using Pada1.BBCore;
 using UnityEngine;
 
-public class SpittingAttackTimer : MonoBehaviour
+
+namespace Zombies.Spitter
 {
-  
-    [SerializeField]private float coolDownTime;
-
-    private float lastSpitTime =0;
-
-
-    public bool IsSpitReady()
+    public class SpittingAttackTimer : MonoBehaviour
     {
-        return Time.time >= lastSpitTime + coolDownTime;
-    }
-    public void ResetCoolDown()
-    {
-        lastSpitTime = Time.time;
+
+        [SerializeField] private float coolDownTime;
+
+        private float lastSpitTime = 0;
+
+
+        public bool IsSpitReady()
+        {
+            return Time.time >= lastSpitTime + coolDownTime;
+        }
+        public void ResetCoolDown()
+        {
+            lastSpitTime = Time.time;
+        }
     }
 }
