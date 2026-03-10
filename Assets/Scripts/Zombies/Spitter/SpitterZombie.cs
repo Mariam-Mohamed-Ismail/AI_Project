@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DeliveryDriver.Audio;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -33,6 +34,10 @@ namespace Assets.Scripts.Zombies.Spitter
         [Header("Health")]
         [SerializeField] private float maxHealth = 100f;
 
+
+        [Header("Audio")]
+        [SerializeField] private AudioSource spittingAudioSource;
+
         private float _lastSpitTime = 0;
         private float currentHealth;
         private bool _isSpittingFinished = false;
@@ -51,8 +56,8 @@ namespace Assets.Scripts.Zombies.Spitter
             _isSpittingFinished = false;
             ResetCoolDown();
             StartCoroutine(StartSpitting());
+            spittingAudioSource.Play();
         }
-
         private IEnumerator StartSpitting()
         {
             yield return new WaitForSeconds(1f);
@@ -100,6 +105,7 @@ namespace Assets.Scripts.Zombies.Spitter
             behaviorExecutor.enabled = false;
             if (animator != null)
                 animator.SetTrigger("die");
+            spittingAudioSource.Stop();
             Destroy(gameObject, 5f);
         }
     }
