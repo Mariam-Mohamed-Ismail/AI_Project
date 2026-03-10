@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 96448838451407516}
   - component: {fileID: 114243545424532484}
   - component: {fileID: 4966310097533539296}
+  - component: {fileID: 5905013093476298694}
   m_Layer: 15
   m_Name: P_LPSP_PROJ_Bullet_01
   m_TagString: Untagged
@@ -244,6 +245,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletDamage
   damage: 5
   enemyLayerName: Enemy
+--- !u!114 &5905013093476298694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086664671600574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cf5868d6f41714fab841a3f1bfc958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  speed: 20
+  lifetime: 2
 --- !u!1 &1231345400216816
 GameObject:
   m_ObjectHideFlags: 0

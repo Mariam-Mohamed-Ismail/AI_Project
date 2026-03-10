@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: ZombieMariam
+  m_EditorClassIdentifier: Assembly-CSharp::BrickAsset
+  brickName: Assets/BehaviorTrees/ZombieMariam.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"1c337acc289235f478466939f3cc8416\" nextId=\"48\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"viewDistance\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"20\" />\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"zombie\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"attackRange\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"attackDuration\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n          <entry
+    name=\"speed\" type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n       
+    </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n     
+    <child>\r\n        <SelectorNode id=\"13\" />\r\n      </child>\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n   
+    <SelectorNode id=\"13\">\r\n      <children>\r\n        <elem>\r\n          <ConditionNode
+    id=\"19\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"43\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"44\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"46\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"45\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"47\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n   
+    <ConditionNode id=\"19\">\r\n      <condition>\r\n        <ConditionEvalNode
+    id=\"0\" />\r\n      </condition>\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"zombie\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"zombie\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <ActionNode
+    id=\"43\" action=\"Zombie/CheckAndFall\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"44\"
+    action=\"Zombie/CheckAndCrawl\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"target\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"target\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"46\" action=\"Zombie/CheckAndAttack\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"target\" />\r\n          <entry name=\"attackRange\"
+    type=\"System.Single\" isBlackboard=\"True\" blackboard=\"attackRange\" />\r\n         
+    <entry name=\"viewDistance\" type=\"System.Single\" isBlackboard=\"True\" blackboard=\"viewDistance\"
+    />\r\n          <entry name=\"attackDuration\" type=\"System.Single\" isBlackboard=\"True\"
+    blackboard=\"attackDuration\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"45\" action=\"Zombie/CheckAndChase\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"target\" />\r\n          <entry name=\"viewDistance\"
+    type=\"System.Single\" isBlackboard=\"True\" blackboard=\"viewDistance\" />\r\n         
+    <entry name=\"attackRange\" type=\"System.Single\" isBlackboard=\"True\" blackboard=\"attackRange\"
+    />\r\n          <entry name=\"speed\" type=\"System.Single\" isBlackboard=\"True\"
+    blackboard=\"speed\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"47\" action=\"Zombie/Idle\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"target\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"target\" />\r\n          <entry name=\"viewDistance\" type=\"System.Single\"
+    isBlackboard=\"True\" blackboard=\"viewDistance\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ConditionEvalNode id=\"0\" policy=\"ATOMIC_CHECK\" name=\"Perception/InAttackRange\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n 
+    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"Zombie\"
+    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
+    <elem>\r\n          <RepeatDecorator id=\"1\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <SelectorNode id=\"13\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ConditionNode id=\"19\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"43\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"44\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"45\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"46\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"47\" />\r\n       
+    </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    <RepeatDecorator id=\"1\" />\r\n          <SelectorNode id=\"13\" />\r\n         
+    <ConditionNode id=\"19\" />\r\n          <ActionNode id=\"45\" />\r\n         
+    <ActionNode id=\"43\" />\r\n          <ActionNode id=\"44\" />\r\n          <ActionNode
+    id=\"46\" />\r\n          <ActionNode id=\"47\" />\r\n        </nodes>\r\n     
+    </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"914.7083 356.345\" name=\"Repeat\"
+    description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n       
+    </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SelectorNode id=\"13\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"904.5371
+    511.0864\" name=\"Selector\" description=\"Executes all its children until one
+    of them is successful\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <SelectorNode id=\"13\" />\r\n          <RepeatDecorator
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
+    <ConditionNode id=\"19\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"381.0594 705.0303\" name=\"Zombie/IsDead\" description=\"\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ConditionNode id=\"19\" />\r\n          <SelectorNode id=\"13\" />\r\n       
+    </data>\r\n      </_data>\r\n    </ConditionNode>\r\n    <ActionNode id=\"43\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"528.1616
+    703.2391\" name=\"Zombie/CheckAndFall\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"43\" />\r\n         
+    <SelectorNode id=\"13\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"44\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"761.7622 700.0389\" name=\"Zombie/CheckAndCrawl\" description=\"\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"44\" />\r\n          <SelectorNode id=\"13\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"46\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"982.5601 700.0391\" name=\"Zombie/CheckAndAttack\"
+    description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"46\" />\r\n          <SelectorNode
+    id=\"13\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ActionNode id=\"45\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1227.363 693.6389\" name=\"Zombie/CheckAndChase\" description=\"\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"45\" />\r\n          <SelectorNode id=\"13\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"47\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"True\" position=\"1413.714 634.2857\" name=\"Zombie/Idle\"
+    description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"47\" />\r\n          <SelectorNode
+    id=\"13\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ConditionEvalNode id=\"0\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n       
+    </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.7
+  subslist: []
+  _guid: 1c337acc289235f478466939f3cc8416
