@@ -12,29 +12,27 @@ public class SpitterAcidExplosion : MonoBehaviour
     public void OnEnable()
     {
         damage = explosionInitialDamage;
-        StartCoroutine(ExplosionDuration());
+        ExplosionDuration();
     }
+
     public void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
-        {
-            Debug.Log("Initial Damage: " + damage);
-        }
+        if (other.CompareTag("Player"))
+            damage = explosionInitialDamage;  
     }
     public void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Player"))
         {
             damage += explosionDamageOverTime * Time.deltaTime;
-            Debug.Log("Damage Over Time: " + damage);
+
+            if(other.TryGetComponent<IDamageable>(out IDamageable playerDamageable))
+                playerDamageable.TakeDamage((int) damage);  
         }
     }
-
-
-    private IEnumerator ExplosionDuration()
+    private void ExplosionDuration()
     {
-        yield return new WaitForSeconds(explosionDuration);
-        Destroy(gameObject);
+        Destroy(gameObject , explosionDuration);
     }
 
 }
