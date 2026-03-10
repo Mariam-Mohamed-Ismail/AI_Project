@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -9136418272992050547, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: -8893078617153529600, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -84,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -7379991069318578728, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: -7269728169905626603, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -91,6 +99,10 @@ PrefabInstance:
     - target: {fileID: -6641415448970445652, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6641415448970445652, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: -6464442196715338680, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
@@ -124,6 +136,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -3962647829050528788, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: -3739190549483330935, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -140,9 +156,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -3122781417413711294, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: -2928631036446536291, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2928631036446536291, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: -2877383546989289611, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
@@ -164,9 +188,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -1881965479880549823, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: -1725203512906818228, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1725203512906818228, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: -1271887500338679504, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
@@ -200,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 353511925560422564, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Name
       value: zombie
@@ -220,13 +256,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1020948974440007045, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 1136803088928199088, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1136803088928199088, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 1276668221320053691, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1276668221320053691, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: 1770222384848715757, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
@@ -236,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1945040816612613005, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 2750158988369709503, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -243,6 +295,10 @@ PrefabInstance:
     - target: {fileID: 3187348372319397752, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187348372319397752, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: 3242671571992157913, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
@@ -260,9 +316,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4041770083595180687, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 5061499379818021415, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061499379818021415, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: 5447311324554542751, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
@@ -279,6 +343,10 @@ PrefabInstance:
     - target: {fileID: 7311561063055367063, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311561063055367063, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: 7547691395978512338, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
@@ -312,13 +380,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8587201446677717949, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 8821932391240933978, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8821932391240933978, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 8912401658242538923, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912401658242538923, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: 9107990444132268871, guid: 86f66e20f5ecff846b3626db25ce0198, type: 3}
       propertyPath: m_Layer

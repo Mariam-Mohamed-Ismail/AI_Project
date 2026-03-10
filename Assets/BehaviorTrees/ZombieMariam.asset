@@ -98,7 +98,7 @@ MonoBehaviour:
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionNode id=\"19\" />\r\n          <SelectorNode id=\"13\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionNode>\r\n    <ActionNode id=\"43\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"537.0515
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"True\" position=\"537.0515
     314.7105\" name=\"Zombie/CheckAndFall\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"43\" />\r\n         
     <SelectorNode id=\"13\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
