@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7849483ff7e7ec4c9dfabe7f246f7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpitterAcidExplosion
-  explosionInitialDamage: 20
-  explosionDamageOverTime: 5
+  explosionInitialDamage: 3
+  explosionDamageOverTime: 0.05
   explosionDuration: 3
 --- !u!65 &8285131046324403133
 BoxCollider:
