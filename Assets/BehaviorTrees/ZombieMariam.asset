@@ -84,39 +84,39 @@ MonoBehaviour:
     <ActionNode id=\"43\" />\r\n          <ActionNode id=\"44\" />\r\n          <ActionNode
     id=\"46\" />\r\n          <ActionNode id=\"47\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"914.7083 356.345\" name=\"Repeat\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"923.5983 -32.18359\" name=\"Repeat\"
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SelectorNode id=\"13\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"904.5371
-    511.0864\" name=\"Selector\" description=\"Executes all its children until one
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"913.4271
+    122.5578\" name=\"Selector\" description=\"Executes all its children until one
     of them is successful\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <SelectorNode id=\"13\" />\r\n          <RepeatDecorator
     id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
     <ConditionNode id=\"19\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"381.0594 705.0303\" name=\"Zombie/IsDead\" description=\"\"
+    selected=\"False\" position=\"389.9494 316.5018\" name=\"Zombie/IsDead\" description=\"\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionNode id=\"19\" />\r\n          <SelectorNode id=\"13\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionNode>\r\n    <ActionNode id=\"43\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"528.1616
-    703.2391\" name=\"Zombie/CheckAndFall\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"537.0515
+    314.7105\" name=\"Zombie/CheckAndFall\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"43\" />\r\n         
     <SelectorNode id=\"13\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"44\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"761.7622 700.0389\" name=\"Zombie/CheckAndCrawl\" description=\"\"
+    position=\"770.652 311.5103\" name=\"Zombie/CheckAndCrawl\" description=\"\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"44\" />\r\n          <SelectorNode id=\"13\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"46\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"982.5601 700.0391\" name=\"Zombie/CheckAndAttack\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"991.4501 311.5106\" name=\"Zombie/CheckAndAttack\"
     description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"46\" />\r\n          <SelectorNode
     id=\"13\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"45\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"1227.363 693.6389\" name=\"Zombie/CheckAndChase\" description=\"\"
+    position=\"1236.253 305.1104\" name=\"Zombie/CheckAndChase\" description=\"\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"45\" />\r\n          <SelectorNode id=\"13\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"47\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"True\" position=\"1413.714 634.2857\" name=\"Zombie/Idle\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"1422.604 245.757\" name=\"Zombie/Idle\"
     description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"47\" />\r\n          <SelectorNode
     id=\"13\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
@@ -124,6 +124,6 @@ MonoBehaviour:
     selected=\"False\" position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.7
+  zoom: 0.6
   subslist: []
   _guid: 1c337acc289235f478466939f3cc8416

@@ -5,18 +5,19 @@ using UnityEngine.AI;
 /// Manages zombie health, damage reactions, state transitions, and death/ragdoll behavior.
 /// Follows strict priority order: Dead > Crawling > Falling > normal states.
 /// </summary>
-public class ZombieHealth : MonoBehaviour
+public class ZombieHealth : MonoBehaviour, IDamageable
 {
     // ─── Public State Flags (read by Behavior Tree actions) ───
     [Header("Zombie State (Read Only at Runtime)")]
     public bool IsDead = false;
     public bool IsCrawling = false;
     public bool FirstShotTriggered = false;
+    private AudioSource zombieAudio;
 
     // ─── Configuration ───
     [Header("Settings")]
-    [SerializeField] private int hitsToTriggerFall = 1;
-    [SerializeField] private int hitsToDie = 2;
+    [SerializeField] private int hitsToTriggerFall;
+    [SerializeField] private int hitsToDie;
 
     // ─── Private State ───
     private int hitCount = 0;
@@ -34,6 +35,12 @@ public class ZombieHealth : MonoBehaviour
     {
         CacheComponents();
         ValidateComponents();
+
+        if (zombieAudio != null)
+        {
+            zombieAudio.loop = true;
+            zombieAudio.Play();
+        }
     }
 
     private void CacheComponents()
@@ -41,6 +48,7 @@ public class ZombieHealth : MonoBehaviour
         animator = GetComponent<Animator>();
         navAgent = GetComponent<NavMeshAgent>();
         behaviorExecutor = GetComponent<BehaviorExecutor>();
+        zombieAudio = GetComponent<AudioSource>();
     }
 
     private void ValidateComponents()
@@ -57,16 +65,38 @@ public class ZombieHealth : MonoBehaviour
     //  DAMAGE HANDLING (Rule 7: Damage triggers state changes)
     // ═══════════════════════════════════════════════════════════
 
+
     /// <summary>
     /// Called by Bullet.cs when a bullet hits this zombie.
     /// First hit → Fall. Second hit → Death.
     /// </summary>
+
+    public void TakeDamage(int amount)
+    {
+        if (IsDead) return;
+
+        for (int i = 0; i < amount; i++)
+        {
+            TakeHit();
+        }
+    }
+
     public void TakeHit()
     {
         if (IsDead) return;
 
         hitCount++;
         Debug.Log($"[ZombieHealth] {gameObject.name} took hit #{hitCount}");
+
+        // While crawling, only die after enough hits
+        if (IsCrawling)
+        {
+            if (hitCount >= hitsToDie)
+            {
+                Die();
+            }
+            return;
+        }
 
         if (hitCount >= hitsToDie)
         {
@@ -77,6 +107,7 @@ public class ZombieHealth : MonoBehaviour
             TriggerFall();
         }
     }
+
 
     // ═══════════════════════════════════════════════════════════
     //  STATE TRANSITIONS
@@ -110,6 +141,7 @@ public class ZombieHealth : MonoBehaviour
     {
         FirstShotTriggered = false;
         IsCrawling = true;
+        hitCount = 0;
 
         if (animator != null)
             animator.SetBool("isCrawling", true);
@@ -130,9 +162,20 @@ public class ZombieHealth : MonoBehaviour
         IsCrawling = false;
         FirstShotTriggered = false;
 
+        if (zombieAudio != null)
+            zombieAudio.Stop();
+
+        // Stop AI first
         DisableBehaviorTree();
-        DisableAnimator();
         DisableNavigation();
+
+        // Disable animator safely
+        if (animator != null)
+        {
+            animator.applyRootMotion = false;
+            animator.enabled = false;
+        }
+
         ActivateRagdoll();
 
         Debug.Log($"[ZombieHealth] {gameObject.name} is dead! Ragdoll activated.");
@@ -174,7 +217,10 @@ public class ZombieHealth : MonoBehaviour
         if (navAgent != null)
         {
             if (navAgent.isOnNavMesh)
+            {
                 navAgent.isStopped = true;
+                navAgent.ResetPath();
+            }
 
             navAgent.enabled = false;
         }
@@ -182,11 +228,40 @@ public class ZombieHealth : MonoBehaviour
 
     private void ActivateRagdoll()
     {
+        // Disable the root collider
+        Collider rootCollider = GetComponent<Collider>();
+        if (rootCollider != null)
+            rootCollider.enabled = false;
+
+        // Get ragdoll rigidbodies
         Rigidbody[] ragdollBodies = GetComponentsInChildren<Rigidbody>();
+
         foreach (Rigidbody rb in ragdollBodies)
         {
+            // Reset all physics velocity to prevent flying
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+
             rb.isKinematic = false;
             rb.useGravity = true;
+        }
+
+        // Enable ragdoll colliders
+        Collider[] ragdollColliders = GetComponentsInChildren<Collider>();
+
+        foreach (Collider col in ragdollColliders)
+        {
+            if (col.gameObject != gameObject)
+                col.enabled = true;
+        }
+
+        // Prevent ragdoll parts from colliding with each other
+        for (int i = 0; i < ragdollColliders.Length; i++)
+        {
+            for (int j = i + 1; j < ragdollColliders.Length; j++)
+            {
+                Physics.IgnoreCollision(ragdollColliders[i], ragdollColliders[j]);
+            }
         }
     }
 }
