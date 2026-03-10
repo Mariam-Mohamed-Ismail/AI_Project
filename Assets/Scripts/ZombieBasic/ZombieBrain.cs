@@ -14,6 +14,7 @@ public class ZombieBrain : MonoBehaviour
 
     [Header("Combat")]
     public int attackDamage = 10;
+    public AudioSource audioSource;
 
     public bool IsDead => health != null && health.IsDead
         ;

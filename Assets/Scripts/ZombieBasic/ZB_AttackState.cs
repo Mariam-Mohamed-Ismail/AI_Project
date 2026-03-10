@@ -58,6 +58,11 @@ public class ZB_AttackState : GOAction
                 dmg.TakeDamage(brain.attackDamage);
             }
 
+            if (brain.audioSource != null)
+            {
+                brain.audioSource.Play();
+            }
+
             lastAttackTime = Time.time;
         }
 
