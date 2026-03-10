@@ -27,26 +27,38 @@ public class ZB_AttackState : GOAction
         if (brain.agent != null)
         {
             brain.agent.isStopped = true;
-            brain.agent.stoppingDistance = brain.attackRange; 
+            brain.agent.stoppingDistance = brain.attackRange;
         }
 
         Vector3 dir = (brain.player.position - gameObject.transform.position);
         dir.y = 0f;
         if (dir.sqrMagnitude > 0.001f)
+        {
             gameObject.transform.rotation =
                 Quaternion.Slerp(gameObject.transform.rotation, Quaternion.LookRotation(dir), 10f * Time.deltaTime);
+        }
 
         if (brain.anim != null)
         {
             brain.anim.SetBool("IsChasing", false);
             brain.anim.SetFloat("Speed", 0f);
+        }
 
-            if (Time.time - lastAttackTime >= attackCooldown)
+        if (Time.time - lastAttackTime >= attackCooldown)
+        {
+            if (brain.anim != null)
             {
-                brain.anim.ResetTrigger("Attack"); 
+                brain.anim.ResetTrigger("Attack");
                 brain.anim.SetTrigger("Attack");
-                lastAttackTime = Time.time;
             }
+
+            var dmg = brain.player.GetComponent<IDamageable>();
+            if (dmg != null)
+            {
+                dmg.TakeDamage(brain.attackDamage);
+            }
+
+            lastAttackTime = Time.time;
         }
 
         return TaskStatus.RUNNING;
@@ -57,7 +69,7 @@ public class ZB_AttackState : GOAction
         if (brain != null && brain.agent != null)
         {
             brain.agent.isStopped = false;
-            brain.agent.stoppingDistance = 0f; 
+            brain.agent.stoppingDistance = 0f;
         }
 
         if (brain != null && brain.anim != null)

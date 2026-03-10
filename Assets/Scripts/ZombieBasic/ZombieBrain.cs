@@ -12,6 +12,9 @@ public class ZombieBrain : MonoBehaviour
     public float detectRange = 12f;
     public float attackRange = 2.2f;
 
+    [Header("Combat")]
+    public int attackDamage = 10;
+
     public bool IsDead => health != null && health.IsDead
         ;
 
