@@ -1,21 +1,17 @@
-﻿using Pada1.BBCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Zombies.Spitter;
+﻿using Assets.Scripts.Zombies.Spitter;
+using Pada1.BBCore;
+
 
 namespace BBUnity.Conditions
 {
-    [Condition("Perception/IsSpitterDead")]
-    internal class SpitterDeathCondition : GOCondition
+    [Condition("Spitter/IsSpitterDead")]
+    public class SpitterDeathCondition : GOCondition
     {
         [InParam("SpitterZombieHealth")]
-        private SpitterZombieHealth spitterZombieHealth;
+        private SpitterZombie spitterZombie;
         public override bool Check()
         {
-            return spitterZombieHealth.IsDead;
+            return spitterZombie.IsDead;
         }
     }
 }

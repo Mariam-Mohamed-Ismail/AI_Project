@@ -1,18 +1,18 @@
+using Assets.Scripts.Zombies.Spitter;
 using Pada1.BBCore;
-using Zombies.Spitter;
 
 namespace BBUnity.Conditions
 {
-    [Condition("Perception/IsSpitReady")]
+    [Condition("Spitter/IsSpitReady")]
     public class SpittingAttackCondition : GOCondition
     {
 
         [InParam("SpittingAttackTimer")]
-        private SpittingAttackTimer spittingAttaxkTimer;
+        private SpitterZombie spitterZombie;
 
         public override bool Check()
         {
-            return spittingAttaxkTimer.IsSpitReady();
+            return spitterZombie.IsSpitReady();
         }
     }
 }

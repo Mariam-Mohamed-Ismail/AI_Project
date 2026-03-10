@@ -1,3 +1,4 @@
+using Assets.Scripts.Zombies.Spitter;
 using BBUnity.Actions;
 using BBUnity.Conditions;
 using Pada1.BBCore;
@@ -5,58 +6,51 @@ using Pada1.BBCore.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum ZombieState
-{
-    Idle,
-    Running,
-    Attacking
-}
+
 
 namespace BBUnity.Actions
 {
     [Action("Zombies/Chase")]
     public class ChaseAction : GOAction
     {
-        [InParam("target")]
-        public GameObject target;
+        [InParam("Spitter Zombie")]
+        private SpitterZombie spitterZombie;
 
-        private NavMeshAgent navAgent;
         private Transform targetTransform;
-        private Animator animator;
+        private NavMeshAgent navAgent;
 
         public override void OnStart()
         {
-            if (target == null)
+            if (spitterZombie == null)
                 return;
-            targetTransform = target.transform;
 
-            navAgent = gameObject.GetComponent<NavMeshAgent>();
+            if (spitterZombie.Animator != null)
+                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Running);
 
-            if (navAgent == null)
-                navAgent = gameObject.AddComponent<NavMeshAgent>();
-           
+            targetTransform = spitterZombie.Target.transform;
+            navAgent = spitterZombie.NavMeshAgent;
             navAgent.SetDestination(targetTransform.position);
             navAgent.isStopped = false;
-            animator = gameObject.GetComponent<Animator>();
-            if (animator != null)
-                animator.SetInteger("state", (int)ZombieState.Running);
-        }
 
-       
+        }
         public override TaskStatus OnUpdate()
         {
-            if (target == null)
+            if (spitterZombie == null || targetTransform == null)
                 return TaskStatus.FAILED;
+
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
                 return TaskStatus.COMPLETED;
             else if (navAgent.destination != targetTransform.position)
                 navAgent.SetDestination(targetTransform.position);
+
             return TaskStatus.RUNNING;
         }
         public override void OnAbort()
         {
             if (navAgent != null)
                 navAgent.isStopped = true;
+            if (spitterZombie != null && spitterZombie.Animator != null)
+                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Idle);
             base.OnAbort();
 
         }
@@ -64,8 +58,9 @@ namespace BBUnity.Actions
         {
             if (navAgent != null)
                 navAgent.isStopped = true;
-            if (animator != null)
-                animator.SetInteger("state", (int)ZombieState.Idle);
+
+            if (spitterZombie != null && spitterZombie.Animator != null)
+                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Idle);
             base.OnEnd();
         }
     }
