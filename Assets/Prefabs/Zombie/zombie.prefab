@@ -45,11 +45,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9078029
+      value: 2.088
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.42
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.w
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BehaviorExecutor
   maxTasksPerTick: 500
-  behavior: {fileID: 11400000, guid: 23e0b45b210c5544ea0b4b69312a9350, type: 2}
+  behavior: {fileID: 11400000, guid: b43e9b10aeabadc44bfff18491e0e25c, type: 2}
   paused: 0
   restartWhenFinished: 0
   blackboard:
@@ -243,13 +243,13 @@ MonoBehaviour:
     boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
-    - 25
     - 15
-    - 7
+    - 10
+    - 25
     floatParamsNames:
+    - AttackDistance
+    - RetreatDistance
     - chaseDistance
-    - attackDistance
-    - retreatDistance
     floatParamsLostDefaultValue: 
     stringParams: []
     stringParamsNames: []
@@ -258,11 +258,11 @@ MonoBehaviour:
     colorParamsNames: []
     colorParamsLostDefaultValue: 
     objectParams:
-    - {fileID: 0}
     - {fileID: 4111462697518693769}
+    - {fileID: 0}
     objectParamsNames:
+    - SpitterZombieHealth
     - target
-    - Spitter Zombie
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

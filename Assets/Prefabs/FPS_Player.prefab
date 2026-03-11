@@ -1406,7 +1406,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1799,6 +1799,7 @@ GameObject:
   - component: {fileID: 235601882378597333}
   - component: {fileID: 4286296768671142144}
   - component: {fileID: 2402528248471955730}
+  - component: {fileID: 7789655167630483738}
   m_Layer: 6
   m_Name: FPS_Player
   m_TagString: Player
@@ -2342,6 +2343,20 @@ MonoBehaviour:
   - {fileID: 9011772387378407518}
   hint: {fileID: 0}
   weightHint: 0
+--- !u!114 &7789655167630483738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858933326914192301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32448e1a0605864bb9f38cf862e4a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 2000
+  progressBar: {fileID: 0}
 --- !u!1 &5891569085684082019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3033,7 +3048,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4596671663502285577}
-  - component: {fileID: 1078689756742875168}
+  - component: {fileID: 781733001655922459}
   m_Layer: 0
   m_Name: GameSceneManager
   m_TagString: Untagged
@@ -148,7 +148,7 @@ Transform:
   - {fileID: 3296765120172644360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1078689756742875168
+--- !u!114 &781733001655922459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

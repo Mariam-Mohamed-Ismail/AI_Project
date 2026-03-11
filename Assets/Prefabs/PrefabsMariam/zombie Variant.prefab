@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 745788068623966923, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 4
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2022730186231303058, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 15
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2220221751089573120, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2503210426891568278, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 12
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3174849604707836725, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 4
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3547832105991327354, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3889195344223260920, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Name
@@ -82,19 +82,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741749316763012227, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 4
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6484809694727912554, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 6
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7751802472295874830, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7790665266400653679, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 4
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8359326949547373754, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: 'blackboard.intParams.Array.data[0]'
@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 5858933326914192301, guid: bd855356eb720b4418899f4de8b28291, type: 3}
     - target: {fileID: 8910170601602998525, guid: f6761da37eb189e40ab6217155b637a8, type: 3}
       propertyPath: m_Mass
-      value: 8
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
