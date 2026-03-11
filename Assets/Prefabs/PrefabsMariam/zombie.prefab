@@ -786,8 +786,9 @@ MonoBehaviour:
   paused: 0
   restartWhenFinished: 1
   blackboard:
-    intParams: 
-    intParamsNames: []
+    intParams: 01000000
+    intParamsNames:
+    - attackDamage
     intParamsLostDefaultValue: 
     boolParams: 
     boolParamsNames: []
@@ -811,7 +812,7 @@ MonoBehaviour:
     colorParamsLostDefaultValue: 
     objectParams:
     - {fileID: 3889195344223260920}
-    - {fileID: 0}
+    - {fileID: 5858933326914192301, guid: bd855356eb720b4418899f4de8b28291, type: 3}
     objectParamsNames:
     - zombie
     - target

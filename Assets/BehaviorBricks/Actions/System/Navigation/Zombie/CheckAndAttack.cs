@@ -10,6 +10,7 @@ public class CheckAndAttack : GOAction
     [InParam("target")] public GameObject target;
     [InParam("attackRange")] public float attackRange = 2f;
     [InParam("attackDuration")] public float attackDuration = 1.2f;
+    [InParam("attackDamage")] public int attackDamage = 10;
 
     private Animator animator;
     private NavMeshAgent agent;
@@ -17,6 +18,7 @@ public class CheckAndAttack : GOAction
 
     private float timer = 0f;
     private bool attackStarted = false;
+    private bool damageDealt = false;
 
     public override void OnStart()
     {
@@ -26,6 +28,7 @@ public class CheckAndAttack : GOAction
 
         timer = 0f;
         attackStarted = false;
+        damageDealt = false;
 
         if (agent != null && agent.isOnNavMesh)
         {
@@ -35,6 +38,7 @@ public class CheckAndAttack : GOAction
 
     public override TaskStatus OnUpdate()
     {
+        Debug.Log("CheckAndAttack running");
         if (animator == null || agent == null || health == null || target == null)
             return TaskStatus.FAILED;
 
@@ -42,6 +46,7 @@ public class CheckAndAttack : GOAction
             return TaskStatus.FAILED;
 
         float distance = Vector3.Distance(agent.transform.position, target.transform.position);
+        Debug.Log("Distance to player: " + distance);
 
         if (distance > attackRange)
             return TaskStatus.FAILED;
@@ -65,6 +70,19 @@ public class CheckAndAttack : GOAction
         }
 
         timer += Time.deltaTime;
+
+        // Apply damage once during the attack
+        if (attackStarted)
+        {
+            Debug.Log("Trying to damage player");
+            if (target.TryGetComponent<IDamageable>(out var dmg))
+            {
+                Debug.Log("Player damage applied");
+                dmg.TakeDamage(attackDamage);
+                damageDealt = true;
+            }
+        }
+
         if (timer >= attackDuration)
         {
             return TaskStatus.COMPLETED;

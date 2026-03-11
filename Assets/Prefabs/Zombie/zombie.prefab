@@ -41,19 +41,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.4
+      value: 54.674633
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9078
+      value: 1.9078029
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29
+      value: -6.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.x
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.z
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -243,13 +243,13 @@ MonoBehaviour:
     boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
+    - 25
     - 15
-    - 13
-    - 30
+    - 7
     floatParamsNames:
+    - chaseDistance
     - attackDistance
     - retreatDistance
-    - chaseDistance
     floatParamsLostDefaultValue: 
     stringParams: []
     stringParamsNames: []

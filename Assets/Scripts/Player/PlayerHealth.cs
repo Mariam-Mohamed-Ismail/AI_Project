@@ -2,11 +2,13 @@ using UI;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour,IDamageable
+public class PlayerHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private ProgressBarUI progressBar;
 
     private int _currentHealth;   
+    private int _currentHealth;
     private Collider _collider;
     void Start()
     {
@@ -23,6 +25,7 @@ public class PlayerHealth : MonoBehaviour,IDamageable
             return;
         }
 
+
         _currentHealth -= amount;
         _currentHealth = Mathf.Max(_currentHealth, 0);
 
@@ -32,6 +35,9 @@ public class PlayerHealth : MonoBehaviour,IDamageable
         {
             Die();
         }
+
+        _currentHealth -= amount;
+     
     }
 
     private void UpdateHealthUI()
@@ -42,6 +48,5 @@ public class PlayerHealth : MonoBehaviour,IDamageable
     private void Die()
     {
         _collider.enabled = false;
-       GameSceneManager.Instance.ReloadLevel();
     }
 }
