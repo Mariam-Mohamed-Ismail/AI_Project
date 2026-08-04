@@ -41,19 +41,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.674633
+      value: 41.27
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.088
+      value: 1.9078
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.68
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.x
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalRotation.z
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -168,6 +168,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2270094220820553698}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6662341768678608523}
   m_SourcePrefab: {fileID: 100100000, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
 --- !u!1 &1962304336858662129 stripped
 GameObject:
@@ -243,9 +246,9 @@ MonoBehaviour:
     boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
-    - 15
+    - 7
     - 10
-    - 25
+    - 20
     floatParamsNames:
     - AttackDistance
     - RetreatDistance
@@ -258,11 +261,11 @@ MonoBehaviour:
     colorParamsNames: []
     colorParamsLostDefaultValue: 
     objectParams:
-    - {fileID: 4111462697518693769}
     - {fileID: 0}
+    - {fileID: 4111462697518693769}
     objectParamsNames:
-    - SpitterZombieHealth
     - target
+    - SpitterZombie
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
@@ -307,14 +310,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Zombies.Spitter.SpitterZombie
   target: {fileID: 0}
   navMeshAgent: {fileID: 800963022942852337}
-  animator: {fileID: 5084701546372318257}
   behaviorExecutor: {fileID: 7617714712240538160}
-  colider: {fileID: 1147535508485749202}
+  zombieCollider: {fileID: 1147535508485749202}
+  animationHandler: {fileID: 6662341768678608523}
   acidBallPrefab: {fileID: 8517293014385306960, guid: 34478661e178698429d00edf61f7d460, type: 3}
   firePoint: {fileID: 2486620786936380301}
-  acidBallSpeed: 60
+  acidBallSpeed: 20
   spitCoolDownTime: 7
-  retreatMaxDistance: 7
+  timeOfFlight: 1.5
+  retreatMaxDistance: 3
   maxHealth: 100
   spittingAudioSource: {fileID: 2270094220820553698}
 --- !u!82 &5680618868100310146
@@ -511,13 +515,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6662341768678608523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962304336858662129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cdaeb79fc75814fba7c5b68b170c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Zombies.Spitter.SpitterAnimationHandler
 --- !u!4 &5052127554167508168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3321919801592875672, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
-  m_PrefabInstance: {fileID: 1727949267641203104}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &5084701546372318257 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: eb17de5e9f9bb794db85d726bbd2f262, type: 3}
   m_PrefabInstance: {fileID: 1727949267641203104}
   m_PrefabAsset: {fileID: 0}

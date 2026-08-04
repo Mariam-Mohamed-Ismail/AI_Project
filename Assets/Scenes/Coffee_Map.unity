@@ -963,17 +963,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012506713666, guid: 58d97d456aead63499ac7d5316541f78, type: 3}
   m_PrefabInstance: {fileID: 58092181}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &70314186 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4111462697518693769, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-  m_PrefabInstance: {fileID: 632005227}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632005228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da79561fd26a717429922af528e5dc6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Zombies.Spitter.SpitterZombie
 --- !u!1001 &74827397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7889,76 +7878,15 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1631076774}
-    - target: {fileID: 4111462697518693769, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: acidBallSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111462697518693769, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: zombieCollider
-      value: 
-      objectReference: {fileID: 632005229}
-    - target: {fileID: 4111462697518693769, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: animationHandler
-      value: 
-      objectReference: {fileID: 632005230}
-    - target: {fileID: 4111462697518693769, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: retreatMaxDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7617714712240538160, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: 'blackboard.floatParams.Array.data[0]'
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7617714712240538160, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: 'blackboard.floatParams.Array.data[2]'
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7617714712240538160, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
       propertyPath: 'blackboard.objectParams.Array.data[0]'
       value: 
       objectReference: {fileID: 1631076774}
-    - target: {fileID: 7617714712240538160, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: 'blackboard.objectParams.Array.data[1]'
-      value: 
-      objectReference: {fileID: 70314186}
-    - target: {fileID: 7617714712240538160, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: 'blackboard.objectParamsNames.Array.data[0]'
-      value: target
-      objectReference: {fileID: 0}
-    - target: {fileID: 7617714712240538160, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      propertyPath: 'blackboard.objectParamsNames.Array.data[1]'
-      value: SpitterZombie
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1962304336858662129, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 632005230}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
---- !u!1 &632005228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1962304336858662129, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-  m_PrefabInstance: {fileID: 632005227}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &632005229 stripped
-CapsuleCollider:
-  m_CorrespondingSourceObject: {fileID: 1147535508485749202, guid: 0e9395f222f394b45bbe35c4853d704a, type: 3}
-  m_PrefabInstance: {fileID: 632005227}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &632005230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632005228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52cdaeb79fc75814fba7c5b68b170c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Zombies.Spitter.SpitterAnimationHandler
 --- !u!1001 &652369298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14420,9 +14348,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.033333335
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d234c0d5aec34d04fad3a442ed236e3f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 530e918ae57ddfa40953df103c9acba5, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1093559461
 Transform:
