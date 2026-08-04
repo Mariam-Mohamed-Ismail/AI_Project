@@ -7,7 +7,7 @@ namespace BBUnity.Conditions
     [Condition("Spitter/IsSpitterDead")]
     public class SpitterDeathCondition : GOCondition
     {
-        [InParam("SpitterZombieHealth")]
+        [InParam("SpitterZombie")]
         private SpitterZombie spitterZombie;
         public override bool Check()
         {

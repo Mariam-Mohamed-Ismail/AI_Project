@@ -14,16 +14,12 @@ namespace BBCore.Actions
     {
         [InParam("Spitter Zombie")]
         private SpitterZombie spitterZombie;
-
         private NavMeshAgent _navMeshAgent;
         private Vector3 _retreatPosition;
         public override void OnStart()
         {
             if (spitterZombie == null)
                 return;
-
-            if (spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Running);
 
             _navMeshAgent = spitterZombie.NavMeshAgent;
             _retreatPosition = spitterZombie.Retreat();
@@ -39,7 +35,7 @@ namespace BBCore.Actions
             if (_navMeshAgent == null)
                 return TaskStatus.FAILED;
 
-            if(!spitterZombie.IsSpittingFinished)
+            if (!spitterZombie.IsSpittingFinished)
                 return TaskStatus.FAILED;
 
             if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
@@ -55,16 +51,14 @@ namespace BBCore.Actions
         {
             if (_navMeshAgent != null)
                 _navMeshAgent.isStopped = true;
-            if (spitterZombie != null && spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Idle);
+
             base.OnAbort();
         }
         public override void OnEnd()
         {
             if (_navMeshAgent != null)
                 _navMeshAgent.isStopped = true;
-            if (spitterZombie != null && spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Idle);
+
             base.OnEnd();
         }
     }

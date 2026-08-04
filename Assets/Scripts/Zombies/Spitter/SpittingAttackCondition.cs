@@ -7,7 +7,7 @@ namespace BBUnity.Conditions
     public class SpittingAttackCondition : GOCondition
     {
 
-        [InParam("SpittingAttackTimer")]
+        [InParam("SpitterZombie")]
         private SpitterZombie spitterZombie;
 
         public override bool Check()

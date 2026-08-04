@@ -24,9 +24,6 @@ namespace BBUnity.Actions
             if (spitterZombie == null)
                 return;
 
-            if (spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Running);
-
             targetTransform = spitterZombie.Target.transform;
             navAgent = spitterZombie.NavMeshAgent;
             navAgent.SetDestination(targetTransform.position);
@@ -49,8 +46,7 @@ namespace BBUnity.Actions
         {
             if (navAgent != null)
                 navAgent.isStopped = true;
-            if (spitterZombie != null && spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Idle);
+
             base.OnAbort();
 
         }
@@ -59,8 +55,6 @@ namespace BBUnity.Actions
             if (navAgent != null)
                 navAgent.isStopped = true;
 
-            if (spitterZombie != null && spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Idle);
             base.OnEnd();
         }
     }

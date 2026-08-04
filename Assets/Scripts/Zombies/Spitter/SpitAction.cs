@@ -17,8 +17,7 @@ namespace BBCore.Actions
         public override void OnStart()
         {
             _hasSpitted = false;
-            if (spitterZombie != null && spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Attacking);
+
         }
 
         public override TaskStatus OnUpdate()
@@ -38,12 +37,12 @@ namespace BBCore.Actions
         }
         public override void OnAbort()
         {
+
             base.OnAbort();
         }
         public override void OnEnd()
         {
-            if (spitterZombie != null && spitterZombie.Animator != null)
-                spitterZombie.Animator.SetInteger("state", (int)SpitterState.Idle);
+
             base.OnEnd();
         }
     }
